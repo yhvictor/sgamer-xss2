@@ -84,4 +84,6 @@ td {
 	document.close();
 };
 
-loadScript('//code.jquery.com/jquery-git.js ', mainEntry);
+if (confirm("Use this tool?")) {
+	loadScript('//code.jquery.com/jquery-git.js ', mainEntry);
+}
