@@ -40,7 +40,13 @@ const handleJson = function(json) {
 		console.log(thread);
 
 		content += '<tr>';
-		content += '<td><a target="_blank" href="/forum.php?mod=viewthread&action=printable&tid=' + thread['tid'] + '">print_link</a></td>';
+		
+		content += '<td>';
+		content += '<a target="_blank" href="/forum.php?mod=viewthread&tid=' + thread['tid'] + '&action=printable">print</a>';
+		content += '/';
+		content += '<a target="_blank" href="/forum.php?mod=viewthread&tid=' + thread['tid'] + '">link</a>';
+		content += '</td>';
+		
 		content += '<td>' + thread['subject'] + '</td>';
 	
 		d = new Date(+thread['dateline']);
