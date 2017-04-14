@@ -41,7 +41,7 @@ const handleJson = function(json) {
 
 		content += '<tr>';
 		content += '<td><a target="_blank" href="/forum.php?mod=viewthread&action=printable&tid=' + thread['tid'] + '">print_link</a></td>';
-		content += '<td><a target="_blank" href="//bbs.sgamer.com/thread-' + thread['tid'] + '-1-1.html">' + thread['subject'] + '</a></td>';
+		content += '<td>' + thread['subject'] + '</td>';
 	
 		d = new Date(+thread['dateline']);
 		content += '<td><a target="_blank" href="//bbs.sgamer.com/home.php?mod=space&uid=' + thread['authorid'] + '">' + thread['author'] + '</a>@' + thread['dateline'] + '</td>';
