@@ -28,6 +28,9 @@ const refreshJson = function() {
 	$.ajax({
 		url: '//' + proxy + 'bbs.sgamer.com/api/mobile/index.php?module=newthreads&fids=44&version=1&limit=' + document.getElementById('threadCount').value,
 		success: handleJson
+	})
+	.always(function() {
+		button.disabled = false;
 	});
 }
 
@@ -56,7 +59,6 @@ const handleJson = function(json) {
 	}
 
 	document.getElementById('jsonWarpper').innerHTML = content;
-	document.getElementById('refreshButton').disabled = false;
 }
 
 const mainEntry = function() {
